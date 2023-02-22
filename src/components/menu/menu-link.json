@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_menu_menu_links",
+  "info": {
+    "displayName": "MenuLink",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "internal_name": {
+      "type": "string"
+    },
+    "only_logged": {
+      "type": "boolean",
+      "default": false
+    },
+    "campaign": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::campaign.campaign"
+    },
+    "image_sm": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image_lg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.ecomlink"
+    },
+    "child_ecom_menu": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ecom-menu.ecom-menu"
+    },
+    "linkable": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

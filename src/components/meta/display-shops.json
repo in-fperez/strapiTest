@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_meta_display_shops",
+  "info": {
+    "displayName": "Display shops",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "displayAtShops": {
+      "type": "string",
+      "regex": "(\\d+)(,\\s*\\d+)*"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_meta_display_to_customers",
+  "info": {
+    "displayName": "Display to customers",
+    "icon": "user-tie",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "displayToCustomers": {
+      "type": "enumeration",
+      "enum": [
+        "To all customers",
+        "Only selected customers",
+        "Only selected customer groups"
+      ],
+      "default": "To all customers",
+      "required": true
+    },
+    "customerIds": {
+      "type": "string"
+    },
+    "customerExcludedIds": {
+      "type": "string"
+    }
+  }
+}

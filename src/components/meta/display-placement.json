@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_meta_display_placements",
+  "info": {
+    "displayName": "Display placement",
+    "icon": "crosshairs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "displayOn": {
+      "type": "enumeration",
+      "enum": [
+        "On all available pages",
+        "On all product pages",
+        "On selected product pages",
+        "On all category pages",
+        "On selected category pages",
+        "On all cms pages",
+        "On selected cms pages",
+        "On all category products pages",
+        "On selected category products pages",
+        "On all Products on cart pages",
+        "On selected Products on cart pages"
+      ]
+    },
+    "displayOnIds": {
+      "type": "string"
+    },
+    "displayOnExcludedIds": {
+      "type": "string"
+    }
+  }
+}

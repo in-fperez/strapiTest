@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_meta_publishings",
+  "info": {
+    "displayName": "Publishing dates",
+    "icon": "calendar-check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "publishAt": {
+      "type": "datetime"
+    },
+    "unpublishAt": {
+      "type": "datetime"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_elements_ecomlinks",
+  "info": {
+    "displayName": "ecomlink",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "category",
+        "cms",
+        "cms_category",
+        "product",
+        "custom"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "anchor": {
+      "type": "string"
+    },
+    "obfuscated": {
+      "type": "boolean",
+      "default": false
+    },
+    "custom_class": {
+      "type": "string"
+    },
+    "config_extra": {
+      "type": "json"
+    }
+  }
+}

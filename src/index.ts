@@ -15,12 +15,34 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap({ strapi }) {
-    strapi.db.lifecycles.subscribe({
-      models: ['plugin::users-permissions.auth.register'],
-
-      async beforeCreate(event) {
-        console.log(event)
+    const conditions = [
+      {
+        displayName: 'Check Vertical Sklum',
+        name: 'Check Vertical Sklum',
+        handler: async () => {
+          const ctx = strapi.requestContext.get();
+          const {model} = ctx.params;
+          const modelSchema = strapi.getModel(model);
+          if (modelSchema?.attributes?.verticalId) {
+            return {verticalId: {$eq: 4}}
+          }
+          return {}
+        }
       },
-    });
+      {
+        displayName: 'Check Vertical Create',
+        name: 'Check Vertical Create',
+        handler: async () => {
+          const ctx = strapi.requestContext.get();
+          const {model} = ctx.params;
+          const modelSchema = strapi.getModel(model);
+          if (modelSchema?.attributes?.verticalId) {
+            return {verticalId: {$eq: 6}}
+          }
+          return {}
+        }
+      }
+    ]
+    await strapi.admin.services.permission.conditionProvider.registerMany(conditions);
   },
 };

@@ -64,6 +64,11 @@
         "meta.targeting",
         "menu.menu-link"
       ]
+    },
+    "prueba_relacion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prueba-relacion.prueba-relacion"
     }
   }
 }
